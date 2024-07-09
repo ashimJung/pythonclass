@@ -16,6 +16,7 @@ arr3=np.array([
   [[2,4,5],[4,5,6]]
 ])
 print(arr3)
+print(arr3[1,1,2])
 
 arr3d_2=np.array([
   [[1,2,3],[4,5,6]],
@@ -80,4 +81,47 @@ std_arr=np.std(example_arr)
 print(std_arr)
 
 #maximum value
+
+
+#using scalar value
+scalar=10
+
+sum_scalar=scalar+arr2
+print(sum_scalar)
+
+mul_scalar=scalar*arr3
+print(mul_scalar)
+print(arr3[arr3>50])
+
+#to generate matrix transpose value of numpy array
+
+trans=np.transpose(arr3)
+print(trans)
+
+#using built in numpy arithmetic function
+ar1=np.array([1,2,3])
+ar2=np.array([22,23,33])
+
+result=np.add(ar1,ar2)
+
+print(np.pi)
+print(result)
+print(np.__version__)
+
+
+#to save numpy array to local device
+np.save("saved_np.npy",mul_scalar)
+
+ar=np.load('/Users/ashim/Desktop/Professional course/saved_np.npy')
+print(ar)
+
+
+#to save multiple numpy array to local device
+np.savez("multiple.npz",arr1=ar1,arr2=ar2)
+
+multiple_load=np.load('/Users/ashim/Desktop/Professional course/multiple.npz')
+print(multiple_load['arr1'])
+
+
+
  
